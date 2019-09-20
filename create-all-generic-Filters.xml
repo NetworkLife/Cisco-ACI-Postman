@@ -1,0 +1,38 @@
+ <fvTenant name="{{Tenant}}">
+
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-Any-Filter" name="Any-Filter" descr="Filter any traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="unspecified" dToPort="unspecified" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="Any" nameAlias="" prot="unspecified" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-Ping-Filter" name="Ping-Filter" descr="Filter Ping traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="unspecified" dToPort="unspecified" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="icmp" nameAlias="" prot="icmp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-SSH-Filter" name="SSH-Filter" descr="Filter SSH traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="22" dToPort="22" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="SSH" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-HTTP-Filter" name="HTTP-Filter" descr="Filter HTTP traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="80" dToPort="80" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="HTTP" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-HTTPs-Filter" name="HTTPs-Filter" descr="Filter HTTPs traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="443" dToPort="443" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="HTTPs" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-TFTP-Filter" name="TFTP-Filter" descr="Filter TFTP traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="69" dToPort="69" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="TFTP" nameAlias="" prot="udp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-FTP-Filter" name="FTP-Filter" descr="Filter FTP traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="20" dToPort="20" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="FTPdata" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="21" dToPort="21" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="FTPcontrol" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-NTP-Filter" name="NTP-Filter" descr="Filter NTP traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="123" dToPort="123" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="NTP" nameAlias="" prot="udp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-SMTP-Filter" name="SMTP-Filter" descr="Filter SMTP traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="25" dToPort="25" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="SMTP" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="465" dToPort="465" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="SMTPs" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="587" dToPort="587" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="SMTPsubmissionRFC6409" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	<vzFilter dn="uni/tn-{{Tenant}}/flt-DNS-Filter" name="DNS-Filter" descr="Filter DNS traffic" >
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="53" dToPort="53" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="DNSudp" nameAlias="" prot="udp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+		<vzEntry annotation="" applyToFrag="no" arpOpc="unspecified" dFromPort="53" dToPort="53" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="DNStcp" nameAlias="" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules=""/>
+	</vzFilter>
+	
+</fvTenant>
