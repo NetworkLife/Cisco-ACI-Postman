@@ -1,0 +1,12 @@
+<fabricInst>
+	<configExportP adminSt="triggered"
+	               descr="Snapshot"
+	               dn="uni/fabric/configexp-defaultOneTime"
+	               format="json"
+	               includeSecureFields="yes"
+	               maxSnapshotCount="global-limit"
+	               name="defaultOneTime"
+	               nameAlias=""
+	               snapshot="yes"
+	               targetDn=""/>
+</fabricInst>
